@@ -1,0 +1,749 @@
+{
+  "config": {
+    "n_seeds": 50,
+    "alpha": 0.1,
+    "delta": 0.1,
+    "epsilon": 0.02,
+    "n_test": 200,
+    "shot_grid": [
+      5,
+      10,
+      20,
+      50,
+      100,
+      200,
+      500,
+      1000
+    ],
+    "budgets": [
+      1000,
+      5000,
+      10000
+    ],
+    "budget_accounting": "CORRECT \u2014 each eval costs M circuit executions",
+    "validity_threshold": "strict alpha, NO padding"
+  },
+  "molecules": {
+    "H2_0.500": {
+      "molecule": "H2",
+      "bond_length": 0.5,
+      "n_qubits": 4,
+      "n_params": 3,
+      "exact_energy": -1.05516,
+      "error_vs_shots": {},
+      "budget_comparison": {
+        "1000": {
+          "CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.002,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Grid-Bonf": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.002,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Gaussian-t": {
+            "M_mean": 326.0,
+            "M_std": 203.0,
+            "risk_mean": 0.084,
+            "risk_std": 0.0,
+            "valid_count": 27,
+            "valid_frac": 0.54
+          },
+          "Bootstrap": {
+            "M_mean": 348.0,
+            "M_std": 217.0,
+            "risk_mean": 0.073,
+            "risk_std": 0.0,
+            "valid_count": 36,
+            "valid_frac": 0.72
+          },
+          "No-CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.002,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          }
+        },
+        "5000": {
+          "CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.001,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Grid-Bonf": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.001,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Gaussian-t": {
+            "M_mean": 464.0,
+            "M_std": 240.0,
+            "risk_mean": 0.044,
+            "risk_std": 0.0,
+            "valid_count": 41,
+            "valid_frac": 0.82
+          },
+          "Bootstrap": {
+            "M_mean": 486.0,
+            "M_std": 190.0,
+            "risk_mean": 0.033,
+            "risk_std": 0.0,
+            "valid_count": 45,
+            "valid_frac": 0.9
+          },
+          "No-CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.001,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          }
+        },
+        "10000": {
+          "CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.002,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Grid-Bonf": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.001,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Gaussian-t": {
+            "M_mean": 560.0,
+            "M_std": 224.0,
+            "risk_mean": 0.023,
+            "risk_std": 0.0,
+            "valid_count": 46,
+            "valid_frac": 0.92
+          },
+          "Bootstrap": {
+            "M_mean": 462.0,
+            "M_std": 205.0,
+            "risk_mean": 0.039,
+            "risk_std": 0.0,
+            "valid_count": 42,
+            "valid_frac": 0.84
+          },
+          "No-CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.002,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          }
+        }
+      }
+    },
+    "H2_0.735": {
+      "molecule": "H2",
+      "bond_length": 0.735,
+      "n_qubits": 4,
+      "n_params": 3,
+      "exact_energy": -1.137306,
+      "error_vs_shots": {},
+      "budget_comparison": {
+        "1000": {
+          "CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.002,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Grid-Bonf": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.001,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Gaussian-t": {
+            "M_mean": 330.0,
+            "M_std": 199.0,
+            "risk_mean": 0.108,
+            "risk_std": 0.0,
+            "valid_count": 19,
+            "valid_frac": 0.38
+          },
+          "Bootstrap": {
+            "M_mean": 398.0,
+            "M_std": 210.0,
+            "risk_mean": 0.075,
+            "risk_std": 0.0,
+            "valid_count": 29,
+            "valid_frac": 0.58
+          },
+          "No-CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.002,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          }
+        },
+        "5000": {
+          "CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.002,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Grid-Bonf": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.002,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Gaussian-t": {
+            "M_mean": 486.0,
+            "M_std": 190.0,
+            "risk_mean": 0.044,
+            "risk_std": 0.0,
+            "valid_count": 41,
+            "valid_frac": 0.82
+          },
+          "Bootstrap": {
+            "M_mean": 568.0,
+            "M_std": 197.0,
+            "risk_mean": 0.024,
+            "risk_std": 0.0,
+            "valid_count": 48,
+            "valid_frac": 0.96
+          },
+          "No-CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.002,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          }
+        },
+        "10000": {
+          "CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.001,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Grid-Bonf": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.001,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Gaussian-t": {
+            "M_mean": 680.0,
+            "M_std": 240.0,
+            "risk_mean": 0.014,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Bootstrap": {
+            "M_mean": 538.0,
+            "M_std": 165.0,
+            "risk_mean": 0.026,
+            "risk_std": 0.0,
+            "valid_count": 48,
+            "valid_frac": 0.96
+          },
+          "No-CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.002,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          }
+        }
+      }
+    },
+    "H2_1.000": {
+      "molecule": "H2",
+      "bond_length": 1.0,
+      "n_qubits": 4,
+      "n_params": 3,
+      "exact_energy": -1.10115,
+      "error_vs_shots": {},
+      "budget_comparison": {
+        "1000": {
+          "CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.002,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Grid-Bonf": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.002,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Gaussian-t": {
+            "M_mean": 426.0,
+            "M_std": 256.0,
+            "risk_mean": 0.091,
+            "risk_std": 0.0,
+            "valid_count": 28,
+            "valid_frac": 0.56
+          },
+          "Bootstrap": {
+            "M_mean": 482.0,
+            "M_std": 264.0,
+            "risk_mean": 0.073,
+            "risk_std": 0.0,
+            "valid_count": 34,
+            "valid_frac": 0.68
+          },
+          "No-CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.003,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          }
+        },
+        "5000": {
+          "CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.002,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Grid-Bonf": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.002,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Gaussian-t": {
+            "M_mean": 622.0,
+            "M_std": 246.0,
+            "risk_mean": 0.03,
+            "risk_std": 0.0,
+            "valid_count": 47,
+            "valid_frac": 0.94
+          },
+          "Bootstrap": {
+            "M_mean": 644.0,
+            "M_std": 237.0,
+            "risk_mean": 0.024,
+            "risk_std": 0.0,
+            "valid_count": 49,
+            "valid_frac": 0.98
+          },
+          "No-CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.003,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          }
+        },
+        "10000": {
+          "CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.002,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Grid-Bonf": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.003,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Gaussian-t": {
+            "M_mean": 774.0,
+            "M_std": 258.0,
+            "risk_mean": 0.018,
+            "risk_std": 0.0,
+            "valid_count": 49,
+            "valid_frac": 0.98
+          },
+          "Bootstrap": {
+            "M_mean": 550.0,
+            "M_std": 150.0,
+            "risk_mean": 0.029,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "No-CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.002,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          }
+        }
+      }
+    },
+    "H2_1.500": {
+      "molecule": "H2",
+      "bond_length": 1.5,
+      "n_qubits": 4,
+      "n_params": 3,
+      "exact_energy": -0.998149,
+      "error_vs_shots": {},
+      "budget_comparison": {
+        "1000": {
+          "CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.001,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Grid-Bonf": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.002,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Gaussian-t": {
+            "M_mean": 354.0,
+            "M_std": 200.0,
+            "risk_mean": 0.094,
+            "risk_std": 0.0,
+            "valid_count": 24,
+            "valid_frac": 0.48
+          },
+          "Bootstrap": {
+            "M_mean": 388.0,
+            "M_std": 192.0,
+            "risk_mean": 0.072,
+            "risk_std": 0.0,
+            "valid_count": 28,
+            "valid_frac": 0.56
+          },
+          "No-CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.002,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          }
+        },
+        "5000": {
+          "CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.002,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Grid-Bonf": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.001,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Gaussian-t": {
+            "M_mean": 532.0,
+            "M_std": 231.0,
+            "risk_mean": 0.039,
+            "risk_std": 0.0,
+            "valid_count": 42,
+            "valid_frac": 0.84
+          },
+          "Bootstrap": {
+            "M_mean": 572.0,
+            "M_std": 263.0,
+            "risk_mean": 0.033,
+            "risk_std": 0.0,
+            "valid_count": 42,
+            "valid_frac": 0.84
+          },
+          "No-CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.002,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          }
+        },
+        "10000": {
+          "CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.001,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Grid-Bonf": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.001,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Gaussian-t": {
+            "M_mean": 680.0,
+            "M_std": 240.0,
+            "risk_mean": 0.012,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Bootstrap": {
+            "M_mean": 488.0,
+            "M_std": 59.0,
+            "risk_mean": 0.025,
+            "risk_std": 0.0,
+            "valid_count": 48,
+            "valid_frac": 0.96
+          },
+          "No-CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.001,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          }
+        }
+      }
+    },
+    "LiH_1.600": {
+      "molecule": "LiH",
+      "bond_length": 1.6,
+      "n_qubits": 12,
+      "n_params": 35,
+      "exact_energy": -6.80519874404686,
+      "error_vs_shots": {
+        "5": {
+          "mean": 0.06748820563305159,
+          "std": 0.07775251128567363,
+          "risk": 0.755
+        },
+        "10": {
+          "mean": 0.04326266431737644,
+          "std": 0.03546538319855845,
+          "risk": 0.665
+        },
+        "20": {
+          "mean": 0.03282169576058965,
+          "std": 0.023356406197682804,
+          "risk": 0.665
+        },
+        "50": {
+          "mean": 0.020875395692861686,
+          "std": 0.015066724908664238,
+          "risk": 0.475
+        },
+        "100": {
+          "mean": 0.014586039238129187,
+          "std": 0.011175851470380024,
+          "risk": 0.29
+        },
+        "200": {
+          "mean": 0.009087681697982509,
+          "std": 0.006871777379640456,
+          "risk": 0.085
+        },
+        "500": {
+          "mean": 0.006828860942877654,
+          "std": 0.005289223916247493,
+          "risk": 0.025
+        },
+        "1000": {
+          "mean": 0.004178624527359389,
+          "std": 0.003317762033171633,
+          "risk": 0.0
+        }
+      },
+      "budget_comparison": {
+        "1000": {
+          "CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.001,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Grid-Bonf": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.001,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Gaussian-t": {
+            "M_mean": 332.0,
+            "M_std": 178.0,
+            "risk_mean": 0.081,
+            "risk_std": 0.0,
+            "valid_count": 25,
+            "valid_frac": 0.5
+          },
+          "Bootstrap": {
+            "M_mean": 350.0,
+            "M_std": 221.0,
+            "risk_mean": 0.08,
+            "risk_std": 0.0,
+            "valid_count": 29,
+            "valid_frac": 0.58
+          },
+          "No-CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.001,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          }
+        },
+        "5000": {
+          "CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.001,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Grid-Bonf": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.0,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Gaussian-t": {
+            "M_mean": 440.0,
+            "M_std": 196.0,
+            "risk_mean": 0.046,
+            "risk_std": 0.0,
+            "valid_count": 40,
+            "valid_frac": 0.8
+          },
+          "Bootstrap": {
+            "M_mean": 528.0,
+            "M_std": 216.0,
+            "risk_mean": 0.027,
+            "risk_std": 0.0,
+            "valid_count": 44,
+            "valid_frac": 0.88
+          },
+          "No-CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.001,
+            "risk_std": 0.0,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          }
+        },
+        "10000": {
+          "CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.0002,
+            "risk_std": 0.0009797958971132714,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Grid-Bonf": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.0005,
+            "risk_std": 0.0015000000000000002,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          },
+          "Gaussian-t": {
+            "M_mean": 622.0,
+            "M_std": 246.0,
+            "risk_mean": 0.0171,
+            "risk_std": 0.025924698648200326,
+            "valid_count": 49,
+            "valid_frac": 0.98
+          },
+          "Bootstrap": {
+            "M_mean": 452.0,
+            "M_std": 109.98181667894016,
+            "risk_mean": 0.031200000000000002,
+            "risk_std": 0.04166005280841588,
+            "valid_count": 45,
+            "valid_frac": 0.9
+          },
+          "No-CRC": {
+            "M_mean": 1000.0,
+            "M_std": 0.0,
+            "risk_mean": 0.0003,
+            "risk_std": 0.0011874342087037917,
+            "valid_count": 50,
+            "valid_frac": 1.0
+          }
+        }
+      }
+    }
+  }
+}

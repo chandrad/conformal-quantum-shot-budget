@@ -1,0 +1,212 @@
+{
+ "config": {
+  "script": "exp_qaoa_crc.py",
+  "problem": "QAOA MaxCut",
+  "n_nodes": 4,
+  "edges": [
+   [
+    0,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    3,
+    0
+   ],
+   [
+    0,
+    2
+   ]
+  ],
+  "p_layers": 1,
+  "C0_noiseless": 2.999318419829471,
+  "true_maxcut": 4,
+  "epsilon": 0.08,
+  "epsilon_rule": "shot-noise std at mid-grid M=100 (transition-in-grid criterion)",
+  "shotnoise_std_M1000": 0.024648313836852998,
+  "shotnoise_std_M100": 0.08210596811438253,
+  "alpha": 0.1,
+  "delta": 0.1,
+  "n_seeds": 50,
+  "n_test": 200,
+  "shot_grid": [
+   5,
+   10,
+   20,
+   50,
+   100,
+   200,
+   500,
+   1000
+  ],
+  "budgets": [
+   1000,
+   5000,
+   10000
+  ],
+  "budget_accounting": "STRICT (v4/v5 functions verbatim)",
+  "validity": "strict alpha, no padding"
+ },
+ "budget_comparison": {
+  "1000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0034,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Grid-Bonf": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0027,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 468.0,
+    "M_std": 239.53287874527788,
+    "risk_mean": 0.07429999999999999,
+    "valid_count": 35,
+    "certified_count": 44
+   },
+   "Bootstrap": {
+    "M_mean": 426.0,
+    "M_std": 241.50362316122713,
+    "risk_mean": 0.09340000000000001,
+    "valid_count": 30,
+    "certified_count": 45
+   },
+   "No-CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0030000000000000005,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "CP-CRC-reuse": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0024,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "CP-CRC-equal": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0026,
+    "valid_count": 50,
+    "certified_count": 0
+   }
+  },
+  "5000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0032,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Grid-Bonf": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0015000000000000002,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 644.0,
+    "M_std": 236.77837739117987,
+    "risk_mean": 0.030199999999999994,
+    "valid_count": 49,
+    "certified_count": 35
+   },
+   "Bootstrap": {
+    "M_mean": 644.0,
+    "M_std": 236.77837739117987,
+    "risk_mean": 0.0254,
+    "valid_count": 49,
+    "certified_count": 35
+   },
+   "No-CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0029000000000000002,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "CP-CRC-reuse": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0038,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "CP-CRC-equal": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0028000000000000004,
+    "valid_count": 50,
+    "certified_count": 0
+   }
+  },
+  "10000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0024,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Grid-Bonf": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0019,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 780.0,
+    "M_std": 248.19347291981714,
+    "risk_mean": 0.0171,
+    "valid_count": 50,
+    "certified_count": 22
+   },
+   "Bootstrap": {
+    "M_mean": 570.0,
+    "M_std": 173.49351572897473,
+    "risk_mean": 0.028099999999999997,
+    "valid_count": 50,
+    "certified_count": 43
+   },
+   "No-CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0021000000000000003,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "CP-CRC-reuse": {
+    "M_mean": 796.0,
+    "M_std": 272.55091267504497,
+    "risk_mean": 0.0194,
+    "valid_count": 50,
+    "certified_count": 18
+   },
+   "CP-CRC-equal": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0032000000000000006,
+    "valid_count": 50,
+    "certified_count": 0
+   }
+  }
+ }
+}

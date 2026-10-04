@@ -1,0 +1,8 @@
+pennylane==0.45.1
+numpy
+scipy
+matplotlib
+tqdm
+# hardware experiments only:
+qiskit==2.3.0
+qiskit-ibm-runtime==0.45.1

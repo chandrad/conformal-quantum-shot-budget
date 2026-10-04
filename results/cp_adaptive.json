@@ -1,0 +1,125 @@
+{
+ "config": {
+  "script": "exp_cp_adaptive.py",
+  "method": "CP-CRC-adaptive",
+  "alpha": 0.1,
+  "delta": 0.1,
+  "epsilon": 0.02,
+  "m0": 50,
+  "pilot_frac": 0.3,
+  "n_min_cp": 22,
+  "shot_grid": [
+   5,
+   10,
+   20,
+   50,
+   100,
+   200,
+   500,
+   1000
+  ],
+  "budgets": [
+   1000,
+   5000,
+   10000
+  ],
+  "n_seeds": 50,
+  "n_test": 200,
+  "budget_accounting": "STRICT: pilot+cert <= B",
+  "validity": "strict alpha, no padding; data-split"
+ },
+ "molecules": {
+  "H2_0.500": {
+   "1000": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0014000000000000002,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "5000": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0009,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "10000": {
+    "M_mean": 968.0,
+    "M_std": 156.76734353812338,
+    "risk_mean": 0.0054,
+    "valid_count": 49,
+    "certified_count": 2
+   }
+  },
+  "H2_0.735": {
+   "1000": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0014000000000000002,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "5000": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0017000000000000001,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "10000": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0019,
+    "valid_count": 50,
+    "certified_count": 0
+   }
+  },
+  "H2_1.000": {
+   "1000": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0025,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "5000": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0019,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "10000": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0025,
+    "valid_count": 50,
+    "certified_count": 0
+   }
+  },
+  "H2_1.500": {
+   "1000": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0011,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "5000": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.001,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "10000": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0012000000000000001,
+    "valid_count": 50,
+    "certified_count": 0
+   }
+  }
+ }
+}

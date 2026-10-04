@@ -1,0 +1,476 @@
+{
+ "config": {
+  "script": "exp_vqe_crc_sensitivity.py",
+  "molecule": "H2_0.735",
+  "n_qubits": 4,
+  "exact_energy": -1.1373060359739025,
+  "n_seeds": 50,
+  "n_test": 200,
+  "alphas": [
+   0.05,
+   0.1,
+   0.2
+  ],
+  "epsilons": [
+   0.01,
+   0.02,
+   0.04
+  ],
+  "budgets": [
+   1000,
+   5000,
+   10000
+  ],
+  "shot_grid": [
+   5,
+   10,
+   20,
+   50,
+   100,
+   200,
+   500,
+   1000
+  ],
+  "delta": "equal to alpha",
+  "budget_accounting": "STRICT (v4 functions verbatim)",
+  "validity": "strict alpha, no padding",
+  "methods": [
+   "CRC",
+   "Gaussian-t"
+  ]
+ },
+ "cells": {
+  "a0.05_e0.01_B1000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.10490000000000001,
+    "valid_count": 0,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 818.0,
+    "M_std": 259.76142900746447,
+    "risk_mean": 0.16469999999999999,
+    "valid_count": 1,
+    "certified_count": 17
+   }
+  },
+  "a0.05_e0.01_B5000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.1015,
+    "valid_count": 0,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 980.0,
+    "M_std": 97.97958971132712,
+    "risk_mean": 0.10400000000000001,
+    "valid_count": 1,
+    "certified_count": 2
+   }
+  },
+  "a0.05_e0.01_B10000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.10060000000000001,
+    "valid_count": 0,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 990.0,
+    "M_std": 70.0,
+    "risk_mean": 0.1014,
+    "valid_count": 1,
+    "certified_count": 1
+   }
+  },
+  "a0.05_e0.02_B1000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0015,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 404.0,
+    "M_std": 190.74590428106183,
+    "risk_mean": 0.0738,
+    "valid_count": 31,
+    "certified_count": 48
+   }
+  },
+  "a0.05_e0.02_B5000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0018,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 580.0,
+    "M_std": 183.3030277982336,
+    "risk_mean": 0.020099999999999996,
+    "valid_count": 50,
+    "certified_count": 42
+   }
+  },
+  "a0.05_e0.02_B10000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0018,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 670.0,
+    "M_std": 236.85438564654024,
+    "risk_mean": 0.015899999999999997,
+    "valid_count": 50,
+    "certified_count": 33
+   }
+  },
+  "a0.05_e0.04_B1000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 124.0,
+    "M_std": 49.23413450036468,
+    "risk_mean": 0.03760000000000001,
+    "valid_count": 42,
+    "certified_count": 50
+   }
+  },
+  "a0.05_e0.04_B5000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 244.0,
+    "M_std": 123.54756169184401,
+    "risk_mean": 0.0065000000000000014,
+    "valid_count": 50,
+    "certified_count": 50
+   }
+  },
+  "a0.05_e0.04_B10000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 232.0,
+    "M_std": 140.62716664997558,
+    "risk_mean": 0.012600000000000002,
+    "valid_count": 49,
+    "certified_count": 50
+   }
+  },
+  "a0.1_e0.01_B1000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.10490000000000001,
+    "valid_count": 21,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 818.0,
+    "M_std": 259.76142900746447,
+    "risk_mean": 0.16469999999999999,
+    "valid_count": 16,
+    "certified_count": 17
+   }
+  },
+  "a0.1_e0.01_B5000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.1015,
+    "valid_count": 25,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 980.0,
+    "M_std": 97.97958971132712,
+    "risk_mean": 0.10400000000000001,
+    "valid_count": 24,
+    "certified_count": 2
+   }
+  },
+  "a0.1_e0.01_B10000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.10060000000000001,
+    "valid_count": 26,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 990.0,
+    "M_std": 70.0,
+    "risk_mean": 0.1014,
+    "valid_count": 25,
+    "certified_count": 1
+   }
+  },
+  "a0.1_e0.02_B1000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0015,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 404.0,
+    "M_std": 190.74590428106183,
+    "risk_mean": 0.0738,
+    "valid_count": 31,
+    "certified_count": 48
+   }
+  },
+  "a0.1_e0.02_B5000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0017,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 552.0,
+    "M_std": 194.15457759218555,
+    "risk_mean": 0.028000000000000004,
+    "valid_count": 47,
+    "certified_count": 43
+   }
+  },
+  "a0.1_e0.02_B10000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0017,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 664.0,
+    "M_std": 244.75293665245368,
+    "risk_mean": 0.0189,
+    "valid_count": 49,
+    "certified_count": 33
+   }
+  },
+  "a0.1_e0.04_B1000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 124.0,
+    "M_std": 49.23413450036468,
+    "risk_mean": 0.03760000000000001,
+    "valid_count": 47,
+    "certified_count": 50
+   }
+  },
+  "a0.1_e0.04_B5000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 138.0,
+    "M_std": 54.36910887627275,
+    "risk_mean": 0.03200000000000001,
+    "valid_count": 46,
+    "certified_count": 50
+   }
+  },
+  "a0.1_e0.04_B10000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 118.0,
+    "M_std": 42.14261501141095,
+    "risk_mean": 0.03660000000000001,
+    "valid_count": 49,
+    "certified_count": 50
+   }
+  },
+  "a0.2_e0.01_B1000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.10490000000000001,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 818.0,
+    "M_std": 259.76142900746447,
+    "risk_mean": 0.16469999999999999,
+    "valid_count": 34,
+    "certified_count": 17
+   }
+  },
+  "a0.2_e0.01_B5000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.1035,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 860.0,
+    "M_std": 224.4994432064365,
+    "risk_mean": 0.1463,
+    "valid_count": 36,
+    "certified_count": 14
+   }
+  },
+  "a0.2_e0.01_B10000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.09970000000000001,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 940.0,
+    "M_std": 162.48076809271922,
+    "risk_mean": 0.1168,
+    "valid_count": 44,
+    "certified_count": 6
+   }
+  },
+  "a0.2_e0.02_B1000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0016,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 358.0,
+    "M_std": 189.8315042346765,
+    "risk_mean": 0.1042,
+    "valid_count": 43,
+    "certified_count": 49
+   }
+  },
+  "a0.2_e0.02_B5000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0017000000000000001,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 374.0,
+    "M_std": 148.06755215103678,
+    "risk_mean": 0.0753,
+    "valid_count": 50,
+    "certified_count": 50
+   }
+  },
+  "a0.2_e0.02_B10000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0016,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 350.0,
+    "M_std": 150.0,
+    "risk_mean": 0.0857,
+    "valid_count": 50,
+    "certified_count": 50
+   }
+  },
+  "a0.2_e0.04_B1000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 76.4,
+    "M_std": 39.63634695579299,
+    "risk_mean": 0.09,
+    "valid_count": 49,
+    "certified_count": 50
+   }
+  },
+  "a0.2_e0.04_B5000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 60.0,
+    "M_std": 20.0,
+    "risk_mean": 0.1023,
+    "valid_count": 50,
+    "certified_count": 50
+   }
+  },
+  "a0.2_e0.04_B10000": {
+   "CRC": {
+    "M_mean": 1000.0,
+    "M_std": 0.0,
+    "risk_mean": 0.0,
+    "valid_count": 50,
+    "certified_count": 0
+   },
+   "Gaussian-t": {
+    "M_mean": 50.0,
+    "M_std": 0.0,
+    "risk_mean": 0.11939999999999999,
+    "valid_count": 50,
+    "certified_count": 50
+   }
+  }
+ }
+}

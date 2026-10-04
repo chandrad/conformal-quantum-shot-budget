@@ -1,0 +1,1258 @@
+{
+ "config": {
+  "script": "exp_vqe_crc_v5_cp.py",
+  "n_seeds": 50,
+  "alpha": 0.1,
+  "delta": 0.1,
+  "epsilon": 0.02,
+  "n_test": 200,
+  "m0": 50,
+  "n_min_cp": 22,
+  "shot_grid": [
+   5,
+   10,
+   20,
+   50,
+   100,
+   200,
+   500,
+   1000
+  ],
+  "budgets": [
+   1000,
+   5000,
+   10000
+  ],
+  "budget_accounting": "STRICT: CP-CRC-reuse spends n0*m0 <= B total; CP-CRC-equal uses v4 equal-cost allocation",
+  "validity": "strict alpha, no padding, same as v4",
+  "seeding": "train np.random.seed(seed); calib np.random.seed(seed+3000); identical to v4"
+ },
+ "molecules": {
+  "H2_0.500": {
+   "budget_comparison": {
+    "1000": {
+     "CP-CRC-reuse": {
+      "M_mean": 1000.0,
+      "M_std": 0.0,
+      "risk_mean": 0.0012000000000000001,
+      "risk_std": 0.0025612496949731396,
+      "valid_count": 50,
+      "certified_count": 0,
+      "_seeds_completed": 50
+     },
+     "CP-CRC-equal": {
+      "M_mean": 1000.0,
+      "M_std": 0.0,
+      "risk_mean": 0.0011,
+      "risk_std": 0.0020712315177207974,
+      "valid_count": 50,
+      "certified_count": 0,
+      "_seeds_completed": 50
+     },
+     "_reuse_diagnostics": [
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      },
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      },
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      },
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      },
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      }
+     ]
+    },
+    "5000": {
+     "CP-CRC-reuse": {
+      "M_mean": 936.0,
+      "M_std": 217.03455946000858,
+      "risk_mean": 0.009800000000000001,
+      "risk_std": 0.029865699389098527,
+      "valid_count": 48,
+      "certified_count": 4,
+      "_seeds_completed": 50
+     },
+     "CP-CRC-equal": {
+      "M_mean": 1000.0,
+      "M_std": 0.0,
+      "risk_mean": 0.0012,
+      "risk_std": 0.0021354156504062626,
+      "valid_count": 50,
+      "certified_count": 0,
+      "_seeds_completed": 50
+     },
+     "_reuse_diagnostics": [
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 5,
+         "ucb": 0.3397
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 1,
+         "ucb": 0.1469
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 4,
+         "ucb": 0.2947
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 2,
+         "ucb": 0.1991
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 1,
+         "ucb": 0.1469
+        }
+       ]
+      }
+     ]
+    },
+    "10000": {
+     "CP-CRC-reuse": {
+      "M_mean": 682.0,
+      "M_std": 295.4251174155644,
+      "risk_mean": 0.017799999999999996,
+      "risk_std": 0.02012858663692014,
+      "valid_count": 50,
+      "certified_count": 27,
+      "_seeds_completed": 50
+     },
+     "CP-CRC-equal": {
+      "M_mean": 1000.0,
+      "M_std": 0.0,
+      "risk_mean": 0.0012,
+      "risk_std": 0.0021354156504062626,
+      "valid_count": 50,
+      "certified_count": 0,
+      "_seeds_completed": 50
+     },
+     "_reuse_diagnostics": [
+      {
+       "status": "no_pass",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 1,
+         "ucb": 0.1656
+        }
+       ]
+      },
+      {
+       "status": "certified",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 0,
+         "ucb": 0.0994
+        },
+        {
+         "M": 400,
+         "n": 25,
+         "failures": 0,
+         "ucb": 0.088
+        },
+        {
+         "M": 350,
+         "n": 28,
+         "failures": 1,
+         "ucb": 0.1319
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 1,
+         "ucb": 0.1656
+        }
+       ]
+      },
+      {
+       "status": "certified",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 0,
+         "ucb": 0.0994
+        },
+        {
+         "M": 400,
+         "n": 25,
+         "failures": 0,
+         "ucb": 0.088
+        },
+        {
+         "M": 350,
+         "n": 28,
+         "failures": 1,
+         "ucb": 0.1319
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 1,
+         "ucb": 0.1656
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "molecule": "H2",
+   "bond_length": 0.5,
+   "n_qubits": 4,
+   "n_params": 3,
+   "exact_energy": -1.0551597607727294
+  },
+  "H2_0.735": {
+   "budget_comparison": {
+    "1000": {
+     "CP-CRC-reuse": {
+      "M_mean": 1000.0,
+      "M_std": 0.0,
+      "risk_mean": 0.0019000000000000002,
+      "risk_std": 0.0029816103031751148,
+      "valid_count": 50,
+      "certified_count": 0,
+      "_seeds_completed": 50
+     },
+     "CP-CRC-equal": {
+      "M_mean": 1000.0,
+      "M_std": 0.0,
+      "risk_mean": 0.002,
+      "risk_std": 0.0026457513110645908,
+      "valid_count": 50,
+      "certified_count": 0,
+      "_seeds_completed": 50
+     },
+     "_reuse_diagnostics": [
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      },
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      },
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      },
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      },
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      }
+     ]
+    },
+    "5000": {
+     "CP-CRC-reuse": {
+      "M_mean": 968.0,
+      "M_std": 156.76734353812338,
+      "risk_mean": 0.0085,
+      "risk_std": 0.03206633748964793,
+      "valid_count": 48,
+      "certified_count": 2,
+      "_seeds_completed": 50
+     },
+     "CP-CRC-equal": {
+      "M_mean": 1000.0,
+      "M_std": 0.0,
+      "risk_mean": 0.0019,
+      "risk_std": 0.0029816103031751148,
+      "valid_count": 50,
+      "certified_count": 0,
+      "_seeds_completed": 50
+     },
+     "_reuse_diagnostics": [
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 3,
+         "ucb": 0.248
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 7,
+         "ucb": 0.4258
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 5,
+         "ucb": 0.3397
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 5,
+         "ucb": 0.3397
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 3,
+         "ucb": 0.248
+        }
+       ]
+      }
+     ]
+    },
+    "10000": {
+     "CP-CRC-reuse": {
+      "M_mean": 658.0,
+      "M_std": 292.8071037389633,
+      "risk_mean": 0.0243,
+      "risk_std": 0.024596951030564744,
+      "valid_count": 50,
+      "certified_count": 29,
+      "_seeds_completed": 50
+     },
+     "CP-CRC-equal": {
+      "M_mean": 1000.0,
+      "M_std": 0.0,
+      "risk_mean": 0.0019,
+      "risk_std": 0.0029816103031751148,
+      "valid_count": 50,
+      "certified_count": 0,
+      "_seeds_completed": 50
+     },
+     "_reuse_diagnostics": [
+      {
+       "status": "certified",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 0,
+         "ucb": 0.0994
+        },
+        {
+         "M": 400,
+         "n": 25,
+         "failures": 1,
+         "ucb": 0.1469
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 1,
+         "ucb": 0.1656
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 1,
+         "ucb": 0.1656
+        }
+       ]
+      },
+      {
+       "status": "certified",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 0,
+         "ucb": 0.0994
+        },
+        {
+         "M": 400,
+         "n": 25,
+         "failures": 0,
+         "ucb": 0.088
+        },
+        {
+         "M": 350,
+         "n": 28,
+         "failures": 0,
+         "ucb": 0.0789
+        },
+        {
+         "M": 300,
+         "n": 33,
+         "failures": 1,
+         "ucb": 0.1128
+        }
+       ]
+      },
+      {
+       "status": "certified",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 0,
+         "ucb": 0.0994
+        },
+        {
+         "M": 400,
+         "n": 25,
+         "failures": 2,
+         "ucb": 0.1991
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "molecule": "H2",
+   "bond_length": 0.735,
+   "n_qubits": 4,
+   "n_params": 3,
+   "exact_energy": -1.1373060359739025
+  },
+  "H2_1.000": {
+   "budget_comparison": {
+    "1000": {
+     "CP-CRC-reuse": {
+      "M_mean": 1000.0,
+      "M_std": 0.0,
+      "risk_mean": 0.0028000000000000004,
+      "risk_std": 0.0036276714294434112,
+      "valid_count": 50,
+      "certified_count": 0,
+      "_seeds_completed": 50
+     },
+     "CP-CRC-equal": {
+      "M_mean": 1000.0,
+      "M_std": 0.0,
+      "risk_mean": 0.0021000000000000003,
+      "risk_std": 0.003618010503025109,
+      "valid_count": 50,
+      "certified_count": 0,
+      "_seeds_completed": 50
+     },
+     "_reuse_diagnostics": [
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      },
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      },
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      },
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      },
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      }
+     ]
+    },
+    "5000": {
+     "CP-CRC-reuse": {
+      "M_mean": 1000.0,
+      "M_std": 0.0,
+      "risk_mean": 0.0021000000000000003,
+      "risk_std": 0.003618010503025109,
+      "valid_count": 50,
+      "certified_count": 0,
+      "_seeds_completed": 50
+     },
+     "CP-CRC-equal": {
+      "M_mean": 1000.0,
+      "M_std": 0.0,
+      "risk_mean": 0.0023,
+      "risk_std": 0.0039,
+      "valid_count": 50,
+      "certified_count": 0,
+      "_seeds_completed": 50
+     },
+     "_reuse_diagnostics": [
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 3,
+         "ucb": 0.248
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 6,
+         "ucb": 0.3833
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 3,
+         "ucb": 0.248
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 6,
+         "ucb": 0.3833
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 5,
+         "ucb": 0.3397
+        }
+       ]
+      }
+     ]
+    },
+    "10000": {
+     "CP-CRC-reuse": {
+      "M_mean": 784.0,
+      "M_std": 276.4850809718311,
+      "risk_mean": 0.0172,
+      "risk_std": 0.021357902518739987,
+      "valid_count": 50,
+      "certified_count": 19,
+      "_seeds_completed": 50
+     },
+     "CP-CRC-equal": {
+      "M_mean": 1000.0,
+      "M_std": 0.0,
+      "risk_mean": 0.0023,
+      "risk_std": 0.0039,
+      "valid_count": 50,
+      "certified_count": 0,
+      "_seeds_completed": 50
+     },
+     "_reuse_diagnostics": [
+      {
+       "status": "certified",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 0,
+         "ucb": 0.0994
+        },
+        {
+         "M": 400,
+         "n": 25,
+         "failures": 1,
+         "ucb": 0.1469
+        }
+       ]
+      },
+      {
+       "status": "certified",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 0,
+         "ucb": 0.0994
+        },
+        {
+         "M": 400,
+         "n": 25,
+         "failures": 1,
+         "ucb": 0.1469
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 1,
+         "ucb": 0.1656
+        }
+       ]
+      },
+      {
+       "status": "certified",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 0,
+         "ucb": 0.0994
+        },
+        {
+         "M": 400,
+         "n": 25,
+         "failures": 0,
+         "ucb": 0.088
+        },
+        {
+         "M": 350,
+         "n": 28,
+         "failures": 2,
+         "ucb": 0.1791
+        }
+       ]
+      },
+      {
+       "status": "certified",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 0,
+         "ucb": 0.0994
+        },
+        {
+         "M": 400,
+         "n": 25,
+         "failures": 2,
+         "ucb": 0.1991
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "molecule": "H2",
+   "bond_length": 1.0,
+   "n_qubits": 4,
+   "n_params": 3,
+   "exact_energy": -1.1011503460613012
+  },
+  "H2_1.500": {
+   "budget_comparison": {
+    "1000": {
+     "CP-CRC-reuse": {
+      "M_mean": 1000.0,
+      "M_std": 0.0,
+      "risk_mean": 0.001,
+      "risk_std": 0.002,
+      "valid_count": 50,
+      "certified_count": 0,
+      "_seeds_completed": 50
+     },
+     "CP-CRC-equal": {
+      "M_mean": 1000.0,
+      "M_std": 0.0,
+      "risk_mean": 0.0013,
+      "risk_std": 0.002193171219946131,
+      "valid_count": 50,
+      "certified_count": 0,
+      "_seeds_completed": 50
+     },
+     "_reuse_diagnostics": [
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      },
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      },
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      },
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      },
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      }
+     ]
+    },
+    "5000": {
+     "CP-CRC-reuse": {
+      "M_mean": 1000.0,
+      "M_std": 0.0,
+      "risk_mean": 0.0013,
+      "risk_std": 0.002193171219946131,
+      "valid_count": 50,
+      "certified_count": 0,
+      "_seeds_completed": 50
+     },
+     "CP-CRC-equal": {
+      "M_mean": 1000.0,
+      "M_std": 0.0,
+      "risk_mean": 0.0009,
+      "risk_std": 0.0019209372712298545,
+      "valid_count": 50,
+      "certified_count": 0,
+      "_seeds_completed": 50
+     },
+     "_reuse_diagnostics": [
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 4,
+         "ucb": 0.2947
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 8,
+         "ucb": 0.4673
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 2,
+         "ucb": 0.1991
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 3,
+         "ucb": 0.248
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 6,
+         "ucb": 0.3833
+        }
+       ]
+      }
+     ]
+    },
+    "10000": {
+     "CP-CRC-reuse": {
+      "M_mean": 655.0,
+      "M_std": 295.5080371157441,
+      "risk_mean": 0.023399999999999997,
+      "risk_std": 0.02375794603916761,
+      "valid_count": 50,
+      "certified_count": 29,
+      "_seeds_completed": 50
+     },
+     "CP-CRC-equal": {
+      "M_mean": 1000.0,
+      "M_std": 0.0,
+      "risk_mean": 0.0009,
+      "risk_std": 0.0019209372712298545,
+      "valid_count": 50,
+      "certified_count": 0,
+      "_seeds_completed": 50
+     },
+     "_reuse_diagnostics": [
+      {
+       "status": "certified",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 0,
+         "ucb": 0.0994
+        },
+        {
+         "M": 400,
+         "n": 25,
+         "failures": 1,
+         "ucb": 0.1469
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 2,
+         "ucb": 0.2242
+        }
+       ]
+      },
+      {
+       "status": "certified",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 0,
+         "ucb": 0.0994
+        },
+        {
+         "M": 400,
+         "n": 25,
+         "failures": 0,
+         "ucb": 0.088
+        },
+        {
+         "M": 350,
+         "n": 28,
+         "failures": 1,
+         "ucb": 0.1319
+        }
+       ]
+      },
+      {
+       "status": "certified",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 0,
+         "ucb": 0.0994
+        },
+        {
+         "M": 400,
+         "n": 25,
+         "failures": 0,
+         "ucb": 0.088
+        },
+        {
+         "M": 350,
+         "n": 28,
+         "failures": 1,
+         "ucb": 0.1319
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 2,
+         "ucb": 0.2242
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "molecule": "H2",
+   "bond_length": 1.5,
+   "n_qubits": 4,
+   "n_params": 3,
+   "exact_energy": -0.9981493719093109
+  },
+  "LiH_1.600": {
+   "budget_comparison": {
+    "1000": {
+     "CP-CRC-reuse": {
+      "M_mean": 1000.0,
+      "M_std": 0.0,
+      "risk_mean": 0.0005,
+      "risk_std": 0.0015000000000000002,
+      "valid_count": 50,
+      "certified_count": 0,
+      "_seeds_completed": 50
+     },
+     "CP-CRC-equal": {
+      "M_mean": 1000.0,
+      "M_std": 0.0,
+      "risk_mean": 0.0006,
+      "risk_std": 0.001624807680927192,
+      "valid_count": 50,
+      "certified_count": 0,
+      "_seeds_completed": 50
+     },
+     "_reuse_diagnostics": [
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      },
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      },
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      },
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      },
+      {
+       "status": "floor",
+       "n0": 20,
+       "note": "n0=20 < 22: certification impossible"
+      }
+     ]
+    },
+    "5000": {
+     "CP-CRC-reuse": {
+      "M_mean": 936.0,
+      "M_std": 217.03455946000858,
+      "risk_mean": 0.0101,
+      "risk_std": 0.033756332739206134,
+      "valid_count": 48,
+      "certified_count": 4,
+      "_seeds_completed": 50
+     },
+     "CP-CRC-equal": {
+      "M_mean": 1000.0,
+      "M_std": 0.0,
+      "risk_mean": 0.0007000000000000001,
+      "risk_std": 0.0020024984394500784,
+      "valid_count": 50,
+      "certified_count": 0,
+      "_seeds_completed": 50
+     },
+     "_reuse_diagnostics": [
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 1,
+         "ucb": 0.1469
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 6,
+         "ucb": 0.3833
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 5,
+         "ucb": 0.3397
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 2,
+         "ucb": 0.1991
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 100,
+       "trace": [
+        {
+         "M": 200,
+         "n": 25,
+         "failures": 7,
+         "ucb": 0.4258
+        }
+       ]
+      }
+     ]
+    },
+    "10000": {
+     "CP-CRC-reuse": {
+      "M_mean": 627.0,
+      "M_std": 295.50126903280807,
+      "risk_mean": 0.0189,
+      "risk_std": 0.021801146758828997,
+      "valid_count": 50,
+      "certified_count": 31,
+      "_seeds_completed": 50
+     },
+     "CP-CRC-equal": {
+      "M_mean": 1000.0,
+      "M_std": 0.0,
+      "risk_mean": 0.0007000000000000001,
+      "risk_std": 0.0020024984394500784,
+      "valid_count": 50,
+      "certified_count": 0,
+      "_seeds_completed": 50
+     },
+     "_reuse_diagnostics": [
+      {
+       "status": "certified",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 0,
+         "ucb": 0.0994
+        },
+        {
+         "M": 400,
+         "n": 25,
+         "failures": 3,
+         "ucb": 0.248
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 1,
+         "ucb": 0.1656
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 2,
+         "ucb": 0.2242
+        }
+       ]
+      },
+      {
+       "status": "no_pass",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 1,
+         "ucb": 0.1656
+        }
+       ]
+      },
+      {
+       "status": "certified",
+       "n0": 200,
+       "trace": [
+        {
+         "M": 450,
+         "n": 22,
+         "failures": 0,
+         "ucb": 0.0994
+        },
+        {
+         "M": 400,
+         "n": 25,
+         "failures": 1,
+         "ucb": 0.1469
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "molecule": "LiH",
+   "bond_length": 1.6,
+   "n_qubits": 12,
+   "n_params": 35,
+   "exact_energy": -6.80519874404686
+  }
+ }
+}
